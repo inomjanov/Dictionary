@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inomjonov's Dictionary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1> Inomjonov's Dictionary</h1>
+    <p>Search any English word</p>
+  </header>
+
+  <main>
+    <div class="search-box">
+     <input type="text" id="searchInput" placeholder="Type a word ">
+      <button onclick="searchWord()">Search</button>
+    </div> 
+
+    <section id="result" class="card hidden">
+      <h2 id="word"></h2>
+      <p id="phonetic"></p>
+
+      <button class="icon-btn" onclick="playAudio()" aria-label="Play pronunciation">
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+    <path d="M3 10v4h4l5 5V5L7 10H3z" fill="currentColor"/>
+    <path d="M14.5 8.5a4 4 0 010 7" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M17.5 5.5a8 8 0 010 13" fill="none" stroke="currentColor" stroke-width="2"/>
+  </svg>
+  <span>Pronunciation</span>
+</button>
+
+
+      <div id="meanings"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
